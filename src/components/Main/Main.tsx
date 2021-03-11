@@ -48,10 +48,10 @@ const Main: React.FC = ({ children }) => {
                      </Link>
                   </Menu.Item>
                   <Menu.Item key="5">
-                     <div>
+                     <Link to="/lab_cabinet">
                         <ExperimentOutlined style={{ fontSize: size }} />
                         Laboratorio y gabinete
-                     </div>
+                     </Link>
                   </Menu.Item>
                   <Menu.Item key="6">
                      <div>
