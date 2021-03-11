@@ -1,0 +1,25 @@
+@import './variables';
+
+@mixin title {
+   color: white;
+   font-size: large;
+   font-family: Arial, Helvetica, sans-serif;
+}
+
+@mixin nav-button {
+   color: $letter-color;
+   font-size: 14px;
+   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+      'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+@mixin paragraph {
+   display: flex;
+   flex-flow: wrap;
+   justify-content: space-between;
+   align-items: center;
+   margin: 20px 0;
+   p {
+      margin: 0;
+   }
+}

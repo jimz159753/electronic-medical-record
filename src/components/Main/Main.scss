@@ -1,0 +1,26 @@
+@import '../../../public/scss/mixins';
+
+.menu {
+   background-color: $base-color !important;
+   height: 100% !important;
+   min-height: 950px;
+
+   .ant-menu-item {
+      @include nav-button;
+      display: flex;
+      align-items: center;
+      margin: 0 !important;
+      height: 60px !important;
+      white-space: normal !important;
+      line-height: 25px !important;
+
+      div {
+         display: flex;
+         align-items: center;
+      }
+   }
+
+   .ant-menu-item-selected {
+      background-color: #bbbcc4 !important;
+   }
+}

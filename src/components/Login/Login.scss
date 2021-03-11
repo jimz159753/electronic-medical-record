@@ -1,0 +1,53 @@
+.login-container {
+   min-height: 1000px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background-image: url('../../public/images/login_background.png');
+   background-size: cover;
+
+   .background {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      background-color: #0e15e1;
+      padding: 20px;
+      opacity: 0.6;
+      border-radius: 12px;
+   }
+
+   h1 {
+      color: white;
+   }
+
+   .ant-input {
+      height: 35px !important;
+      width: 200px;
+      border-radius: 12px;
+   }
+
+   .ant-form-item {
+      flex-direction: column;
+
+      .ant-form-item-label {
+         text-align: left !important;
+
+         label {
+            color: white;
+         }
+      }
+
+      .ant-form-item-label
+         > label.ant-form-item-required:not(.ant-form-item-required-mark-optional)::before {
+         display: none !important;
+      }
+   }
+
+   button {
+      width: 200px;
+      height: 35px;
+      align-self: center;
+      margin: 15px 0;
+   }
+}

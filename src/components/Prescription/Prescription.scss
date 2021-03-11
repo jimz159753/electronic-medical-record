@@ -1,0 +1,43 @@
+@import '../../../public/scss/variables';
+
+.prescription-container {
+   display: flex;
+   flex-direction: column;
+   margin: 20px;
+   padding: 20px;
+   border: 1px $border-color solid;
+   border-radius: 10px;
+
+   .ant-input {
+      height: 35px !important;
+      border-radius: 12px;
+      margin: 10px 0;
+   }
+
+   .ant-form-item {
+      margin: 0 !important;
+      display: flex;
+      align-items: center;
+
+      .ant-input {
+         width: 200px !important;
+         margin: 10px 0;
+      }
+
+      p {
+         margin: 0;
+      }
+   }
+
+   .ant-form-item-label
+      > label.ant-form-item-required:not(.ant-form-item-required-mark-optional)::before {
+      display: none !important;
+   }
+
+   button {
+      width: 200px;
+      height: 35px;
+      align-self: center;
+      margin: 15px 0;
+   }
+}
