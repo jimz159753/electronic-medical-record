@@ -15,13 +15,12 @@
    }
 
    .ant-form-item {
-      margin: 0 !important;
       display: flex;
       align-items: center;
+      margin: 10px;
 
       .ant-input {
-         width: 200px !important;
-         margin: 10px 0;
+         margin: 0;
       }
 
       p {

@@ -307,7 +307,7 @@ const Admission: React.FC = () => {
                   <Input />
                </Form.Item>
             </Col>
-            <Col>
+            <Col span={24}>
                <Form.Item
                   name="c"
                   label={

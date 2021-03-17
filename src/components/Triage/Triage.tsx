@@ -1,5 +1,5 @@
 import React from 'react'
-import { Row, Col, Form, Input, Button } from 'antd'
+import { Row, Col, Form, Input, Button, DatePicker } from 'antd'
 import './Triage.scss'
 import TableTriage from './TableTriage'
 import Admission from './Admission'
@@ -26,14 +26,14 @@ const Triage: React.FC = () => {
                         },
                      ]}
                   >
-                     <Input />
+                     <DatePicker />
                   </Form.Item>
                </Row>
                <Row justify="space-between">
                   <Col>
                      <Form.Item
                         name="name"
-                        label="Nombre"
+                        label="Nombre completo del pasiente"
                         rules={[
                            {
                               required: true,
@@ -43,9 +43,11 @@ const Triage: React.FC = () => {
                      >
                         <Input />
                      </Form.Item>
+                  </Col>
+                  <Col>
                      <Form.Item
-                        name="birthday"
-                        label="Fecha de nacimiento"
+                        name="curp"
+                        label="CURP del pasiente"
                         rules={[
                            {
                               required: true,
@@ -55,6 +57,78 @@ const Triage: React.FC = () => {
                      >
                         <Input />
                      </Form.Item>
+                  </Col>
+                  <Col>
+                     <Form.Item
+                        name="ref"
+                        label="Referida por"
+                        rules={[
+                           {
+                              required: true,
+                              message: 'Este campo es requerido!',
+                           },
+                        ]}
+                     >
+                        <Input />
+                     </Form.Item>
+                  </Col>
+                  <Col>
+                     <Form.Item
+                        name="birthdate"
+                        label="Fecha y hora"
+                        rules={[
+                           {
+                              required: true,
+                              message: 'Este campo es requerido!',
+                           },
+                        ]}
+                     >
+                        <DatePicker />
+                     </Form.Item>
+                  </Col>
+                  <Col>
+                     <Form.Item
+                        name="age"
+                        label="Edad"
+                        rules={[
+                           {
+                              required: true,
+                              message: 'Este campo es requerido!',
+                           },
+                        ]}
+                     >
+                        <Input />
+                     </Form.Item>
+                  </Col>
+                  <Col>
+                     <Form.Item
+                        name="state"
+                        label="Estado civil"
+                        rules={[
+                           {
+                              required: true,
+                              message: 'Este campo es requerido!',
+                           },
+                        ]}
+                     >
+                        <Input />
+                     </Form.Item>
+                  </Col>
+                  <Col>
+                     <Form.Item
+                        name="ocupation"
+                        label="Ocupación"
+                        rules={[
+                           {
+                              required: true,
+                              message: 'Este campo es requerido!',
+                           },
+                        ]}
+                     >
+                        <Input />
+                     </Form.Item>
+                  </Col>
+                  <Col>
                      <Form.Item
                         name="address"
                         label="Domicilio"
@@ -70,70 +144,8 @@ const Triage: React.FC = () => {
                   </Col>
                   <Col>
                      <Form.Item
-                        name="name"
-                        label="Nombre"
-                        rules={[
-                           {
-                              required: true,
-                              message: 'Este campo es requerido!',
-                           },
-                        ]}
-                     >
-                        <Input />
-                     </Form.Item>
-                     <Form.Item
-                        name="birthday"
-                        label="Fecha de nacimiento"
-                        rules={[
-                           {
-                              required: true,
-                              message: 'Este campo es requerido!',
-                           },
-                        ]}
-                     >
-                        <Input />
-                     </Form.Item>
-                     <Form.Item
-                        name="address"
-                        label="Domicilio"
-                        rules={[
-                           {
-                              required: true,
-                              message: 'Este campo es requerido!',
-                           },
-                        ]}
-                     >
-                        <Input />
-                     </Form.Item>
-                  </Col>
-                  <Col>
-                     <Form.Item
-                        name="name"
-                        label="Nombre"
-                        rules={[
-                           {
-                              required: true,
-                              message: 'Este campo es requerido!',
-                           },
-                        ]}
-                     >
-                        <Input />
-                     </Form.Item>
-                     <Form.Item
-                        name="birthday"
-                        label="Fecha de nacimiento"
-                        rules={[
-                           {
-                              required: true,
-                              message: 'Este campo es requerido!',
-                           },
-                        ]}
-                     >
-                        <Input />
-                     </Form.Item>
-                     <Form.Item
-                        name="address"
-                        label="Domicilio"
+                        name="motive"
+                        label="Motivo de la consulta"
                         rules={[
                            {
                               required: true,
@@ -238,7 +250,7 @@ const Triage: React.FC = () => {
                   <Input addonBefore="Evolución del paciente" />
                </Form.Item>
                <Row justify="space-between">
-                  <Col>
+                  <Col span={10}>
                      <Form.Item
                         name="name_doc"
                         label="Nombre del medico"
@@ -264,7 +276,7 @@ const Triage: React.FC = () => {
                         <Input />
                      </Form.Item>
                   </Col>
-                  <Col>
+                  <Col span={10}>
                      <Form.Item
                         name="ced_doc"
                         label="Cedula del medico"

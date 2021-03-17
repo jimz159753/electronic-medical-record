@@ -84,7 +84,7 @@ const Evolution: React.FC = () => {
                   <Input addonBefore="Frecuencia respiratoria" />
                </Form.Item>
             </Col>
-            <Col>
+            <Col span={24}>
                <Form.Item
                   name="temperature2"
                   rules={[
@@ -99,7 +99,7 @@ const Evolution: React.FC = () => {
             </Col>
          </Row>
          <Row justify="space-between">
-            <Col>
+            <Col span={10}>
                <Form.Item
                   name="name_doc2"
                   label={<p>Nombre medico</p>}
@@ -113,7 +113,7 @@ const Evolution: React.FC = () => {
                   <Input />
                </Form.Item>
             </Col>
-            <Col>
+            <Col span={10}>
                <Form.Item
                   name="ced_doc2"
                   label={<p>Cedúla medico</p>}
