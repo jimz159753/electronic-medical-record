@@ -54,10 +54,10 @@ const Main: React.FC = ({ children }) => {
                      </Link>
                   </Menu.Item>
                   <Menu.Item key="6">
-                     <div>
+                     <Link to="/clinic_hist">
                         <UndoOutlined style={{ fontSize: size }} />
                         Historia clínica
-                     </div>
+                     </Link>
                   </Menu.Item>
                   <Menu.Item key="7">
                      <div>

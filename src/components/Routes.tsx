@@ -6,6 +6,7 @@ import ConsentLetter from './ConsentLetter'
 import Main from './Main'
 import Prescription from './Prescription'
 import LabCabinet from './LabCabinet'
+import ClinicHistory from './ClinicHistory'
 
 const Routes: React.FC = () => {
    return (
@@ -17,6 +18,7 @@ const Routes: React.FC = () => {
                <Route path="/consent" exact component={ConsentLetter} />
                <Route path="/prescription" exact component={Prescription} />
                <Route path="/lab_cabinet" exact component={LabCabinet} />
+               <Route path="/clinic_hist" exact component={ClinicHistory} />
             </Main>
          </Switch>
       </Router>

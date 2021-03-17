@@ -1,34 +1,24 @@
 import React from 'react'
-import { Form, Input, Row, Col, Radio, DatePicker, Divider, Button } from 'antd'
-import './Prescription.scss'
+import { Form, Radio, Input, Button, Row, Col } from 'antd'
+import './ClinicHistory.scss'
+import GineBackground from './GineBackground'
+import SysInterrogatory from './SysInterrogatory'
+import MedicAtention from './MedicAtention'
 
-const Prescription: React.FC = () => {
-   const [value, setValue] = React.useState('no')
+const ClinicHistory: React.FC = () => {
    return (
-      <div className="prescription-container">
-         <h1>Receta</h1>
+      <div className="clinic-history-container">
+         <h1>Historia clínica</h1>
          <Form>
-            <Row justify="end">
-               <Col span={6}>
-                  <Form.Item
-                     name="date"
-                     label={<p>Fecha</p>}
-                     rules={[
-                        {
-                           required: true,
-                           message: 'Este campo es requerido!',
-                        },
-                     ]}
-                  >
-                     <DatePicker />
-                  </Form.Item>
-               </Col>
-            </Row>
             <Row>
                <Col span={6}>
                   <Form.Item
-                     name="name_uni"
-                     label={<p>Nombre de la unidad</p>}
+                     name="int"
+                     label={
+                        <p className="first-paragraph">
+                           Interrogatorio directo
+                        </p>
+                     }
                      rules={[
                         {
                            required: true,
@@ -36,41 +26,16 @@ const Prescription: React.FC = () => {
                         },
                      ]}
                   >
-                     <Input />
+                     <Radio.Group>
+                        <Radio value={'yes'}>si</Radio>
+                        <Radio value={'no'}>no</Radio>
+                     </Radio.Group>
                   </Form.Item>
                </Col>
                <Col span={6}>
                   <Form.Item
-                     name="code"
-                     label={<p>Clave (CLUES)</p>}
-                     rules={[
-                        {
-                           required: true,
-                           message: 'Este campo es requerido!',
-                        },
-                     ]}
-                  >
-                     <Input />
-                  </Form.Item>
-               </Col>
-               <Col span={6}>
-                  <Form.Item
-                     name="address"
-                     label={<p>Domicilio</p>}
-                     rules={[
-                        {
-                           required: true,
-                           message: 'Este campo es requerido!',
-                        },
-                     ]}
-                  >
-                     <Input />
-                  </Form.Item>
-               </Col>
-               <Col span={6}>
-                  <Form.Item
-                     name="exp_number"
-                     label={<p>Número de expediente</p>}
+                     name="who"
+                     label={<p>Quien</p>}
                      rules={[
                         {
                            required: true,
@@ -84,7 +49,21 @@ const Prescription: React.FC = () => {
                <Col span={6}>
                   <Form.Item
                      name="name"
-                     label={<p>Nombre</p>}
+                     label={<p>Nombre completo</p>}
+                     rules={[
+                        {
+                           required: true,
+                           message: 'Este campo es requerido!',
+                        },
+                     ]}
+                  >
+                     <Input />
+                  </Form.Item>
+               </Col>
+               <Col span={6}>
+                  <Form.Item
+                     name="birthday"
+                     label={<p>Fecha de nacimiento</p>}
                      rules={[
                         {
                            required: true,
@@ -111,7 +90,8 @@ const Prescription: React.FC = () => {
                </Col>
                <Col span={6}>
                   <Form.Item
-                     name="time"
+                     name="sex"
+                     label={<p>Sexo</p>}
                      rules={[
                         {
                            required: true,
@@ -119,21 +99,16 @@ const Prescription: React.FC = () => {
                         },
                      ]}
                   >
-                     <Radio.Group value={value}>
-                        <Radio value={'years'}>Años</Radio>
-                        <Radio value={'months'}>Meses</Radio>
-                        <Radio value={'days'}>Dias</Radio>
-                        <Radio value={'hours'}>Horas</Radio>
+                     <Radio.Group>
+                        <Radio value={'male'}>masculino</Radio>
+                        <Radio value={'female'}>femenino</Radio>
                      </Radio.Group>
                   </Form.Item>
                </Col>
-            </Row>
-            <Divider>Datos del paciente</Divider>
-            <Row>
                <Col span={6}>
                   <Form.Item
-                     name="seg_number"
-                     label={<p>Número de afiliación al seguro popular</p>}
+                     name="ocupation"
+                     label={<p>Ocupación</p>}
                      rules={[
                         {
                            required: true,
@@ -146,8 +121,8 @@ const Prescription: React.FC = () => {
                </Col>
                <Col span={6}>
                   <Form.Item
-                     name="code_seg"
-                     label={<p>Clave</p>}
+                     name="address"
+                     label={<p>Domicilio</p>}
                      rules={[
                         {
                            required: true,
@@ -160,8 +135,8 @@ const Prescription: React.FC = () => {
                </Col>
                <Col span={6}>
                   <Form.Item
-                     name="amount"
-                     label={<p>Cantidad con letra</p>}
+                     name="motive"
+                     label={<p>Motivo de consulta</p>}
                      rules={[
                         {
                            required: true,
@@ -174,8 +149,8 @@ const Prescription: React.FC = () => {
                </Col>
                <Col span={6}>
                   <Form.Item
-                     name="generic_name"
-                     label={<p>Nombre genérico</p>}
+                     name="evolution"
+                     label={<p>Evolución del padecimiento</p>}
                      rules={[
                         {
                            required: true,
@@ -188,8 +163,8 @@ const Prescription: React.FC = () => {
                </Col>
                <Col span={6}>
                   <Form.Item
-                     name="presentation"
-                     label={<p>Presentación</p>}
+                     name="sufferings"
+                     label={<p>Antecedentes heredo familiares</p>}
                      rules={[
                         {
                            required: true,
@@ -202,8 +177,8 @@ const Prescription: React.FC = () => {
                </Col>
                <Col span={6}>
                   <Form.Item
-                     name="steps"
-                     label={<p>Indicaciones</p>}
+                     name="personal_back"
+                     label={<p>Antecedentes personales</p>}
                      rules={[
                         {
                            required: true,
@@ -216,8 +191,25 @@ const Prescription: React.FC = () => {
                </Col>
                <Col span={6}>
                   <Form.Item
-                     name="amount_obtained"
-                     label={<p>Cantidad recibida</p>}
+                     name="previous_hosp"
+                     label={<p>Hospitalizaciones previas</p>}
+                     rules={[
+                        {
+                           required: true,
+                           message: 'Este campo es requerido!',
+                        },
+                     ]}
+                  >
+                     <Radio.Group>
+                        <Radio value={'yes'}>si</Radio>
+                        <Radio value={'no'}>no</Radio>
+                     </Radio.Group>
+                  </Form.Item>
+               </Col>
+               <Col span={6}>
+                  <Form.Item
+                     name="previous_hosp_esp"
+                     label={<p>Especificar</p>}
                      rules={[
                         {
                            required: true,
@@ -230,8 +222,8 @@ const Prescription: React.FC = () => {
                </Col>
                <Col span={6}>
                   <Form.Item
-                     name="name_doc"
-                     label={<p>Nombre del médico</p>}
+                     name="previous_quirurgic"
+                     label={<p>Antecedentes quirurgicos</p>}
                      rules={[
                         {
                            required: true,
@@ -239,55 +231,16 @@ const Prescription: React.FC = () => {
                         },
                      ]}
                   >
-                     <Input />
+                     <Radio.Group>
+                        <Radio value={'yes'}>si</Radio>
+                        <Radio value={'no'}>no</Radio>
+                     </Radio.Group>
                   </Form.Item>
                </Col>
                <Col span={6}>
                   <Form.Item
-                     name="ced_pro"
-                     label={<p>Cedula profesional</p>}
-                     rules={[
-                        {
-                           required: true,
-                           message: 'Este campo es requerido!',
-                        },
-                     ]}
-                  >
-                     <Input />
-                  </Form.Item>
-               </Col>
-               <Col span={6}>
-                  <Form.Item
-                     name="ced_esp"
-                     label={<p>Cedula de especialidad</p>}
-                     rules={[
-                        {
-                           required: true,
-                           message: 'Este campo es requerido!',
-                        },
-                     ]}
-                  >
-                     <Input />
-                  </Form.Item>
-               </Col>
-               <Col span={6}>
-                  <Form.Item
-                     name="university"
-                     label={<p>Universidad</p>}
-                     rules={[
-                        {
-                           required: true,
-                           message: 'Este campo es requerido!',
-                        },
-                     ]}
-                  >
-                     <Input />
-                  </Form.Item>
-               </Col>
-               <Col span={6}>
-                  <Form.Item
-                     name="schedule"
-                     label={<p>Horario de atención</p>}
+                     name="previous_hosp_esp"
+                     label={<p>Especificar</p>}
                      rules={[
                         {
                            required: true,
@@ -299,10 +252,13 @@ const Prescription: React.FC = () => {
                   </Form.Item>
                </Col>
             </Row>
+            <GineBackground />
+            <SysInterrogatory />
+            <MedicAtention />
             <Button htmlType="submit">Enviar</Button>
          </Form>
       </div>
    )
 }
 
-export default Prescription
+export default ClinicHistory

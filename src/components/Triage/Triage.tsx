@@ -16,21 +16,23 @@ const Triage: React.FC = () => {
          <div>
             <Form>
                <Row justify="end">
-                  <Form.Item
-                     name="date"
-                     label="Fecha y hora"
-                     rules={[
-                        {
-                           required: true,
-                           message: 'Este campo es requerido!',
-                        },
-                     ]}
-                  >
-                     <DatePicker />
-                  </Form.Item>
+                  <Col span={6}>
+                     <Form.Item
+                        name="date"
+                        label={<p>Fecha y hora</p>}
+                        rules={[
+                           {
+                              required: true,
+                              message: 'Este campo es requerido!',
+                           },
+                        ]}
+                     >
+                        <DatePicker />
+                     </Form.Item>
+                  </Col>
                </Row>
                <Row justify="space-between">
-                  <Col>
+                  <Col span={6}>
                      <Form.Item
                         name="name"
                         label="Nombre completo del pasiente"
@@ -44,7 +46,7 @@ const Triage: React.FC = () => {
                         <Input />
                      </Form.Item>
                   </Col>
-                  <Col>
+                  <Col span={6}>
                      <Form.Item
                         name="curp"
                         label="CURP del pasiente"
@@ -58,7 +60,7 @@ const Triage: React.FC = () => {
                         <Input />
                      </Form.Item>
                   </Col>
-                  <Col>
+                  <Col span={6}>
                      <Form.Item
                         name="ref"
                         label="Referida por"
@@ -72,7 +74,7 @@ const Triage: React.FC = () => {
                         <Input />
                      </Form.Item>
                   </Col>
-                  <Col>
+                  <Col span={6}>
                      <Form.Item
                         name="birthdate"
                         label="Fecha y hora"
@@ -86,7 +88,7 @@ const Triage: React.FC = () => {
                         <DatePicker />
                      </Form.Item>
                   </Col>
-                  <Col>
+                  <Col span={6}>
                      <Form.Item
                         name="age"
                         label="Edad"
@@ -100,7 +102,7 @@ const Triage: React.FC = () => {
                         <Input />
                      </Form.Item>
                   </Col>
-                  <Col>
+                  <Col span={6}>
                      <Form.Item
                         name="state"
                         label="Estado civil"
@@ -114,7 +116,7 @@ const Triage: React.FC = () => {
                         <Input />
                      </Form.Item>
                   </Col>
-                  <Col>
+                  <Col span={6}>
                      <Form.Item
                         name="ocupation"
                         label="Ocupación"
@@ -128,7 +130,7 @@ const Triage: React.FC = () => {
                         <Input />
                      </Form.Item>
                   </Col>
-                  <Col>
+                  <Col span={6}>
                      <Form.Item
                         name="address"
                         label="Domicilio"
@@ -142,7 +144,7 @@ const Triage: React.FC = () => {
                         <Input />
                      </Form.Item>
                   </Col>
-                  <Col>
+                  <Col span={6}>
                      <Form.Item
                         name="motive"
                         label="Motivo de la consulta"
@@ -159,7 +161,7 @@ const Triage: React.FC = () => {
                </Row>
                <TableTriage />
                <Row justify="space-between">
-                  <Col>
+                  <Col span={6}>
                      <Form.Item
                         name="weight"
                         rules={[
@@ -172,7 +174,7 @@ const Triage: React.FC = () => {
                         <Input addonBefore="Peso" />
                      </Form.Item>
                   </Col>
-                  <Col>
+                  <Col span={6}>
                      <Form.Item
                         name="size"
                         rules={[
@@ -185,7 +187,7 @@ const Triage: React.FC = () => {
                         <Input addonBefore="Talla" />
                      </Form.Item>
                   </Col>
-                  <Col>
+                  <Col span={6}>
                      <Form.Item
                         name="blood_pressure"
                         rules={[
@@ -198,7 +200,7 @@ const Triage: React.FC = () => {
                         <Input addonBefore="Tensión arterial" />
                      </Form.Item>
                   </Col>
-                  <Col>
+                  <Col span={6}>
                      <Form.Item
                         name="frequency_card"
                         rules={[
@@ -211,7 +213,7 @@ const Triage: React.FC = () => {
                         <Input addonBefore="Frecuencia cardiaca" />
                      </Form.Item>
                   </Col>
-                  <Col>
+                  <Col span={6}>
                      <Form.Item
                         name="frequency_resp"
                         rules={[
@@ -224,7 +226,7 @@ const Triage: React.FC = () => {
                         <Input addonBefore="Frecuencia respiratoria" />
                      </Form.Item>
                   </Col>
-                  <Col>
+                  <Col span={6}>
                      <Form.Item
                         name="temperature"
                         rules={[

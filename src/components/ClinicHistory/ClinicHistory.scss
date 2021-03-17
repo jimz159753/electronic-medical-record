@@ -1,6 +1,6 @@
 @import '../../../public/scss/variables';
 
-.triage-container {
+.clinic-history-container {
    display: flex;
    flex-direction: column;
    margin: 20px;
@@ -11,12 +11,17 @@
    .ant-input {
       height: 35px !important;
       border-radius: 12px;
+      margin: 10px 0;
    }
 
    .ant-form-item {
       display: flex;
       align-items: center;
       margin: 10px;
+
+      .ant-input {
+         margin: 10px 0;
+      }
 
       p {
          margin: 0;
@@ -25,16 +30,13 @@
       .ant-picker {
          width: 100%;
          border-radius: 10px;
+         margin: 10px 0;
       }
+   }
 
-      .ant-form-item-label {
-         text-align: left !important;
-      }
-
-      .ant-form-item-label
-         > label.ant-form-item-required:not(.ant-form-item-required-mark-optional)::before {
-         display: none !important;
-      }
+   .ant-form-item-label
+      > label.ant-form-item-required:not(.ant-form-item-required-mark-optional)::before {
+      display: none !important;
    }
 
    button {
