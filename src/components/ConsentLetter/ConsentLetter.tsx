@@ -1,12 +1,21 @@
 import React from 'react'
+import axios from 'axios'
 import { Input, Radio, Button, Form } from 'antd'
 import './ConsentLetter.scss'
 
 const ConsentLetter: React.FC = () => {
+   const [form] = Form.useForm()
+
+   const addConsentLetter = (values: any) => {
+      axios
+         .post('http://localhost:5000/api/consentLetter/add', values)
+         .then((res) => form.resetFields())
+      form.resetFields()
+   }
    return (
       <div className="consent-container">
          <h1>Carta consentimiento</h1>
-         <Form>
+         <Form form={form} onFinish={(values: any) => addConsentLetter(values)}>
             <div className="first-paragraph">
                <p>Yo</p>
                <Form.Item

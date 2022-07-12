@@ -14,7 +14,7 @@ const Triage: React.FC = () => {
             <p>Ficha de identificación</p>
          </div>
          <div>
-            <Form>
+            <Form onFinish={(values: any) => console.log('values', values)}>
                <Row justify="end">
                   <Col span={6}>
                      <Form.Item

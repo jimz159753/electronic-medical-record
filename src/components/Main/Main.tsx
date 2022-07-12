@@ -60,16 +60,10 @@ const Main: React.FC = ({ children }) => {
                      </Link>
                   </Menu.Item>
                   <Menu.Item key="7">
-                     <div>
-                        <SmileOutlined style={{ fontSize: size }} />
-                        Sistema de referencia y contra referencia
-                     </div>
-                  </Menu.Item>
-                  <Menu.Item key="8">
-                     <div>
-                        <SafetyOutlined style={{ fontSize: size }} />
-                        Valoración enfermería
-                     </div>
+                     <Link to="/consent_view">
+                        <FileDoneOutlined style={{ fontSize: size }} />
+                        Carta consentimiento vista
+                     </Link>
                   </Menu.Item>
                </Menu>
             </Col>

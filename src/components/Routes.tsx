@@ -7,6 +7,7 @@ import Main from './Main'
 import Prescription from './Prescription'
 import LabCabinet from './LabCabinet'
 import ClinicHistory from './ClinicHistory'
+import ConsentLetterView from './ConsentLetterView/ConsentLetterView'
 
 const Routes: React.FC = () => {
    return (
@@ -19,6 +20,11 @@ const Routes: React.FC = () => {
                <Route path="/prescription" exact component={Prescription} />
                <Route path="/lab_cabinet" exact component={LabCabinet} />
                <Route path="/clinic_hist" exact component={ClinicHistory} />
+               <Route
+                  path="/consent_view"
+                  exact
+                  component={ConsentLetterView}
+               />
             </Main>
          </Switch>
       </Router>
