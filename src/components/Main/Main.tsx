@@ -67,7 +67,9 @@ const Main: React.FC = ({ children }) => {
                   </Menu.Item>
                </Menu>
             </Col>
-            <Col span={20}>{children}</Col>
+            <Col span={20} className="info-content">
+               {children}
+            </Col>
          </Row>
       </div>
    )
