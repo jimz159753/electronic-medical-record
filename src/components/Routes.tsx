@@ -9,13 +9,6 @@ import LabCabinet from './LabCabinet'
 import ClinicHistory from './ClinicHistory'
 import ConsentLetterView from './ConsentLetterView/ConsentLetterView'
 import ConsentLetterPDF from './ConsentLetterPDF'
-import { PDFViewer } from '@react-pdf/renderer'
-
-const PDFView = () => (
-   <PDFViewer style={{ width: '100%', height: '100%' }}>
-      <ConsentLetterPDF />
-   </PDFViewer>
-)
 
 const Routes: React.FC = () => {
    return (
@@ -33,7 +26,7 @@ const Routes: React.FC = () => {
                   exact
                   component={ConsentLetterView}
                />
-               <Route path="/consent_pdf" exact component={PDFView} />
+               <Route path="/consent_pdf" exact component={ConsentLetterPDF} />
             </Main>
          </Switch>
       </Router>

@@ -42,9 +42,9 @@ const Main: React.FC = ({ children }) => {
                      </Link>
                   </Menu.Item>
                   <Menu.Item key="4">
-                     <Link to="/prescription">
-                        <FormOutlined style={{ fontSize: size }} />
-                        Receta
+                     <Link to="/consent_view">
+                        <FileDoneOutlined style={{ fontSize: size }} />
+                        Carta consentimiento vista
                      </Link>
                   </Menu.Item>
                   <Menu.Item key="5">
@@ -60,9 +60,9 @@ const Main: React.FC = ({ children }) => {
                      </Link>
                   </Menu.Item>
                   <Menu.Item key="7">
-                     <Link to="/consent_view">
-                        <FileDoneOutlined style={{ fontSize: size }} />
-                        Carta consentimiento vista
+                     <Link to="/prescription">
+                        <FormOutlined style={{ fontSize: size }} />
+                        Receta
                      </Link>
                   </Menu.Item>
                </Menu>

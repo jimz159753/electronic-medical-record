@@ -10,14 +10,17 @@ const TableTriage: React.FC = () => {
       {
          title: 'Nivel I (rojo) Emergencia riesgo vital',
          dataIndex: 'level_I',
+         className: 'red-header',
       },
       {
          title: 'Nibel II (amarillo) Paciente agudo crítico',
          dataIndex: 'level_II',
+         className: 'yellow-header',
       },
       {
          title: 'Nivel III (verde) No crítico',
          dataIndex: 'level_III',
+         className: 'green-header',
       },
    ]
 
@@ -102,6 +105,7 @@ const TableTriage: React.FC = () => {
    ]
    return (
       <Table
+         className="table-content"
          columns={columns}
          dataSource={data}
          pagination={{ pageSize: 15, hideOnSinglePage: true }}

@@ -43,4 +43,18 @@
       align-self: center;
       margin: 15px 0;
    }
+
+   .ant-table-content {
+      thead {
+         .red-header {
+            background-color: red;
+         }
+         .yellow-header {
+            background-color: yellow;
+         }
+         .green-header {
+            background-color: green;
+         }
+      }
+   }
 }

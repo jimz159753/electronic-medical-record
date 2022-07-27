@@ -1,6 +1,7 @@
 /* eslint-disable prettier/prettier */
 import React, { useEffect, useState } from 'react'
-import { Table } from 'antd'
+import { Table, Button } from 'antd'
+import { Link } from "react-router-dom";
 import axios from 'axios'
 
 const ConsentLetterView = () => {
@@ -54,8 +55,18 @@ const ConsentLetterView = () => {
             key: 'sex',
             dataIndex: 'sex'
         },
+        {
+            title: 'Accion',
+            key: 'operation',
+            render: (text: any, record: any) => <Link to={{
+                pathname: '/consent_pdf',
+                state: { phone: record.phone }
+            }} >descargar</Link>
+        }
     ]
 
-    return <Table columns={columns} dataSource={data} />
+    return <>
+        <h1 style={{ textAlign: 'center', margin: '20px 0' }}>Registro Carta Consentimiento</h1>
+        <Table columns={columns} dataSource={data} /></>
 }
 export default ConsentLetterView
