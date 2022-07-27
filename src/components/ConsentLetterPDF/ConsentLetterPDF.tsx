@@ -48,7 +48,7 @@ const ConsentLetterPDF = () => {
             .get(`http://localhost:5000/api/consentLetter/${state.phone}`)
             .then((res) => res.data)
             .then(ok => setData(ok))
-    }, [])
+    }, [state.phone])
 
 
     return (
@@ -62,7 +62,7 @@ const ConsentLetterPDF = () => {
                         <>
                             <Text style={styles.text}>Yo <Text style={styles.mark}>{data.name_cli_1}</Text> de <Text style={styles.mark}>{data.age}</Text> de edad <Text style={styles.mark}>{data.sex}</Text>. Con domicilio <Text style={styles.mark}>{data.street}, {data.number}, {data.colony} {data.postal_code},
                                 {data.town} {data.state}</Text>. El <Text style={styles.mark}>{data.in_charge}</Text> de: <Text style={styles.mark}>{data.name_cli_2}</Text> identificandose con <Text style={styles.mark}>{data.name_cli_2}.</Text></Text>
-                            <Text style={styles.text}>declaro:</Text>
+                            <Text style={styles.text}>Declaro:</Text>
                             <Text style={styles.text}>Que el Dr.(a) <Text style={styles.mark}>{data.name_doc}</Text></Text>
                             <Text style={styles.text}>me ha explicado que es conveniente me(le) realicen los procedimientos que a continuación se
                                 señalan: <Text style={styles.mark}>{data.procedures}</Text> Asi mismo, me ha informado en lenguaje claro y sencillo, que todo acto

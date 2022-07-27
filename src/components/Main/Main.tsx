@@ -2,7 +2,14 @@ import React from 'react'
 import { Menu, Col, Row } from 'antd'
 import { Link } from 'react-router-dom'
 import Header from '../Header'
+import Chatbot from 'react-chatbot-kit'
+import 'react-chatbot-kit/build/main.css'
 import './Main.scss'
+
+import config from './configs/chatbotConfig'
+import MessageParser from './chatbot/MessageParser'
+import ActionProvider from './chatbot/ActionProvider'
+
 import {
    HomeFilled,
    FolderOpenOutlined,
@@ -70,6 +77,11 @@ const Main: React.FC = ({ children }) => {
             <Col span={20} className="info-content">
                {children}
             </Col>
+            <Chatbot
+               config={config}
+               messageParser={MessageParser}
+               actionProvider={ActionProvider}
+            />
          </Row>
       </div>
    )
